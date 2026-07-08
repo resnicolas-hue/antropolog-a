@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <header class="site-header">
   <nav class="nav container">
     <a href="#inicio" class="logo">Nombre Apellido</a>
@@ -33,28 +35,28 @@
   <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <p class="eyebrow">Antropología social y cultural</p>
-        <h1>Nombre Apellido</h1>
-        <p class="hero-subtitle">
+        <p class="eyebrow hero-in" style="--d:0">Antropología social y cultural</p>
+        <h1 class="hero-in" style="--d:1">Nombre Apellido</h1>
+        <p class="hero-subtitle hero-in" style="--d:2">
           Investigo formas de vida, parentesco y transformación cultural a través del trabajo
           de campo etnográfico. Este sitio reúne mis proyectos, publicaciones y registros visuales.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions hero-in" style="--d:3">
           <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
           <a href="#contacto" class="btn btn-outline">Contactar</a>
         </div>
       </div>
-      <div class="hero-portrait" aria-hidden="true">
-        <div class="portrait-frame">NA</div>
+      <div class="hero-portrait hero-in" style="--d:1" aria-hidden="true">
+        <div class="portrait-frame" id="portraitFrame">NA</div>
       </div>
     </div>
   </section>
 
   <section id="sobre-mi" class="section">
     <div class="container">
-      <h2 class="section-title">Sobre mí</h2>
+      <h2 class="section-title reveal">Sobre mí</h2>
       <div class="about-grid">
-        <p class="about-text">
+        <p class="about-text reveal">
           Soy antropólogo/a especializado/a en etnografía y estudios de comunidades.
           Mi trabajo combina trabajo de campo prolongado, entrevistas en profundidad y
           análisis de archivo para comprender cómo las personas construyen sentido,
@@ -62,7 +64,7 @@
           He realizado investigación en distintos contextos rurales y urbanos, y colaboro
           con instituciones académicas y comunitarias en la difusión de resultados.
         </p>
-        <ul class="about-facts">
+        <ul class="about-facts reveal" style="--d:1">
           <li><span>Formación</span>Licenciatura / Maestría / Doctorado en Antropología</li>
           <li><span>Áreas</span>Etnografía, parentesco, ritual, migración</li>
           <li><span>Idiomas</span>Español, Inglés</li>
@@ -74,21 +76,21 @@
 
   <section id="lineas" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Líneas de investigación</h2>
+      <h2 class="section-title reveal">Líneas de investigación</h2>
       <div class="cards-grid">
-        <article class="card">
+        <article class="card reveal" style="--d:0">
           <h3>Parentesco y familia</h3>
           <p>Estudio de estructuras de parentesco y transformaciones en la organización familiar contemporánea.</p>
         </article>
-        <article class="card">
+        <article class="card reveal" style="--d:1">
           <h3>Migración y territorio</h3>
           <p>Trayectorias migratorias, memoria del territorio y reconfiguración de identidades locales.</p>
         </article>
-        <article class="card">
+        <article class="card reveal" style="--d:2">
           <h3>Ritual y religiosidad</h3>
           <p>Prácticas rituales, cosmovisiones y su relación con la vida social y política.</p>
         </article>
-        <article class="card">
+        <article class="card reveal" style="--d:3">
           <h3>Antropología urbana</h3>
           <p>Dinámicas de espacio público, informalidad y vida cotidiana en contextos urbanos.</p>
         </article>
@@ -96,70 +98,74 @@
     </div>
   </section>
 
-  <section id="proyectos" class="section">
+  <section id="proyectos" class="section proyectos-scrolly">
     <div class="container">
-      <h2 class="section-title">Proyectos de campo</h2>
-      <div class="projects-list">
+      <h2 class="section-title reveal">Proyectos de campo</h2>
+      <div class="scrolly-wrapper">
 
-        <article class="project">
-          <div class="project-media" aria-hidden="true">2022–2024</div>
-          <div class="project-body">
+        <div class="scrolly-sticky">
+          <div class="scrolly-sticky-inner">
+            <span class="scrolly-index" id="scrollyIndex">01</span>
+            <span class="scrolly-year" id="scrollyYear">2022–2024</span>
+            <div class="scrolly-track" aria-hidden="true">
+              <span class="scrolly-track-fill" id="scrollyTrackFill"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scrolly-steps">
+
+          <article class="scrolly-step" data-index="01" data-year="2022–2024">
             <h3>Nombre del proyecto de investigación</h3>
             <p class="project-meta">Región / País · Trabajo de campo etnográfico</p>
             <p>
               Breve descripción del proyecto: objetivos, metodología y principales hallazgos.
               Reemplazá este texto con el resumen real de tu investigación.
             </p>
-          </div>
-        </article>
+          </article>
 
-        <article class="project">
-          <div class="project-media" aria-hidden="true">2020–2021</div>
-          <div class="project-body">
+          <article class="scrolly-step" data-index="02" data-year="2020–2021">
             <h3>Nombre de otro proyecto</h3>
             <p class="project-meta">Región / País · Estudio de caso</p>
             <p>
               Descripción del segundo proyecto, comunidad o grupo estudiado, y resultados
               relevantes obtenidos durante la investigación de campo.
             </p>
-          </div>
-        </article>
+          </article>
 
-        <article class="project">
-          <div class="project-media" aria-hidden="true">2018–2019</div>
-          <div class="project-body">
+          <article class="scrolly-step" data-index="03" data-year="2018–2019">
             <h3>Proyecto anterior</h3>
             <p class="project-meta">Región / País · Colaboración institucional</p>
             <p>
               Espacio para un tercer proyecto o tesis, incluyendo instituciones colaboradoras
               y financiamiento, si corresponde.
             </p>
-          </div>
-        </article>
+          </article>
 
+        </div>
       </div>
     </div>
   </section>
 
   <section id="publicaciones" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Publicaciones</h2>
+      <h2 class="section-title reveal">Publicaciones</h2>
       <ul class="pub-list">
-        <li>
+        <li class="reveal" style="--d:0">
           <span class="pub-year">2024</span>
           <div>
             <p class="pub-title">Título del artículo o capítulo de libro</p>
             <p class="pub-detail">Nombre de la revista / editorial, volumen, páginas.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal" style="--d:1">
           <span class="pub-year">2022</span>
           <div>
             <p class="pub-title">Título de otra publicación académica</p>
             <p class="pub-detail">Nombre de la revista / editorial, volumen, páginas.</p>
           </div>
         </li>
-        <li>
+        <li class="reveal" style="--d:2">
           <span class="pub-year">2020</span>
           <div>
             <p class="pub-title">Tesis o informe de investigación</p>
@@ -172,22 +178,22 @@
 
   <section id="galeria" class="section">
     <div class="container">
-      <h2 class="section-title">Galería de campo</h2>
-      <p class="section-lead">Registros fotográficos del trabajo de campo. Reemplazá estos espacios por tus propias imágenes.</p>
+      <h2 class="section-title reveal">Galería de campo</h2>
+      <p class="section-lead reveal">Registros fotográficos del trabajo de campo. Reemplazá estos espacios por tus propias imágenes.</p>
       <div class="gallery-grid">
-        <div class="gallery-item">Foto 1</div>
-        <div class="gallery-item">Foto 2</div>
-        <div class="gallery-item">Foto 3</div>
-        <div class="gallery-item">Foto 4</div>
-        <div class="gallery-item">Foto 5</div>
-        <div class="gallery-item">Foto 6</div>
+        <div class="gallery-item reveal" style="--d:0">Foto 1</div>
+        <div class="gallery-item reveal" style="--d:1">Foto 2</div>
+        <div class="gallery-item reveal" style="--d:2">Foto 3</div>
+        <div class="gallery-item reveal" style="--d:3">Foto 4</div>
+        <div class="gallery-item reveal" style="--d:4">Foto 5</div>
+        <div class="gallery-item reveal" style="--d:5">Foto 6</div>
       </div>
     </div>
   </section>
 
   <section id="contacto" class="section section-alt">
     <div class="container contact-grid">
-      <div>
+      <div class="reveal">
         <h2 class="section-title">Contacto</h2>
         <p class="section-lead">
           ¿Interesado en colaborar, invitar a una charla o conocer más sobre mi investigación?
@@ -201,7 +207,7 @@
           </li>
         </ul>
       </div>
-      <form class="contact-form" action="mailto:resnicolas@gmail.com" method="post" enctype="text/plain">
+      <form class="contact-form reveal" style="--d:1" action="mailto:resnicolas@gmail.com" method="post" enctype="text/plain">
         <label>
           Nombre
           <input type="text" name="nombre" required>
